@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import 'grapesjs/dist/css/grapes.min.css';
+import gjspresetwebpage from 'grapesjs-preset-webpage';
+import gjsblockbasic from 'grapesjs-blocks-basic'
+import { GrapesjsReact } from 'grapesjs-react';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  return <GrapesjsReact
+  id='grapesjs-react'
+  plugins={[
+    gjspresetwebpage,
+    gjsblockbasic
+  ]}
+/>;
+
+  
 }
 
 export default App;
